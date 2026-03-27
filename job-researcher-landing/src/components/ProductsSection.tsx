@@ -20,6 +20,7 @@ export interface Product {
   icon: React.ElementType;
   tag?: string;
   tagColor?: "yellow" | "red";
+  stripeUrl?: string;
   details?: {
     features: string[];
     requirements: string[];
@@ -85,6 +86,7 @@ const products: Product[] = [
     icon: Briefcase,
     tag: "New",
     tagColor: "yellow",
+    stripeUrl: "https://buy.stripe.com/5kQ7sNfbib7acq08Nz4F205",
     details: {
       features: [
         "Scrape LinkedIn/Indeed job postings automatically",
@@ -260,9 +262,20 @@ const ProductCard = ({ product, onAdd }: { product: Product; onAdd: (p: Product)
               </div>
               <span className="text-xs text-muted-foreground">One-time purchase</span>
             </div>
-            <Button className="w-full font-semibold gap-2" onClick={() => { onAdd(product); setIsModalOpen(false); }}>
-              <ShoppingCart size={16} /> Add to Cart
-            </Button>
+            {product.stripeUrl ? (
+              <a 
+                href={product.stripeUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full gap-2 rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              >
+                Buy Now <ArrowRight size={16} />
+              </a>
+            ) : (
+              <Button className="w-full font-semibold gap-2" onClick={() => { onAdd(product); setIsModalOpen(false); }}>
+                <ShoppingCart size={16} /> Add to Cart
+              </Button>
+            )}
           </div>
         </div>
       </DialogContent>
