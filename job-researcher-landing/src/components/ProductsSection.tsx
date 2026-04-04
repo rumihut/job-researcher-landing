@@ -312,7 +312,7 @@ const ProductsSection = () => {
           className="mb-14"
         >
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-primary mb-3">
-            The Store
+            OpenClaw Skills
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold italic mb-4">
             Grab what you need

@@ -16,13 +16,13 @@ const FooterCTA = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to stop wasting time
+            Ready to automate
             <br />
-            <span className="text-crab-red text-glow-red">on ghost jobs?</span>
+            <span className="text-crab-red text-glow-red">your workflow?</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto mb-8">
-            Join smart job seekers who research before applying.
-            Get the complete system for $39.
+            Discover OpenClaw skills that handle the repetitive work.
+            Browse the collection starting at $15.
           </p>
           <Button
             size="lg"
