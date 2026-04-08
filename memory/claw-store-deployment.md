@@ -172,7 +172,7 @@ Reference the archive in daily logs:
 
 **Solution:** GitHub Personal Access Token (PAT) for ahuts account
 
-**Token:** `[REDACTED]`
+**Token:** `[REDACTED — see 1Password or local config]`
 - **Scope:** `repo` (full control of private repositories)
 - **Account:** ahuts (Aaron's account)
 - **Status:** ✅ Active, no expiration
