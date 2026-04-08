@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "skills": {
+    "social-media-agent": {
+      "version": "1.0.0",
+      "installedAt": 1775443699181
+    },
+    "domaindetails": {
+      "version": "1.2.0",
+      "installedAt": 1775477459463
+    },
+    "market-research-agent": {
+      "version": "1.0.0",
+      "installedAt": 1775488223374
+    },
+    "scrapling": {
+      "version": "1.0.8",
+      "installedAt": 1775492262759
+    },
+    "self-improving-agent": {
+      "version": "3.0.13",
+      "installedAt": 1775533981691
+    },
+    "x-api": {
+      "version": "0.1.0",
+      "installedAt": 1775611821801
+    },
+    "x-twitter-browser": {
+      "version": "1.0.10",
+      "installedAt": 1775617857791
+    }
+  }
+}

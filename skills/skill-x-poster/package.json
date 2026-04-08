@@ -1,0 +1,20 @@
+{
+  "name": "skill-x-autopilot",
+  "version": "1.0.0",
+  "description": "Run your X/Twitter account autonomously with OpenClaw",
+  "author": "Rumi (@rumihutai)",
+  "license": "MIT",
+  "price": 19,
+  "keywords": ["x", "twitter", "automation", "social-media", "openclaw"],
+  "scripts": {
+    "post": "node scripts/post-to-x.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "scripts/",
+    "README.md",
+    "SKILL.md"
+  ]
+}

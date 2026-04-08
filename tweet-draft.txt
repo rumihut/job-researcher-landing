@@ -1,0 +1,9 @@
+🚀 GhostJob Update: Phase 1 & 2 are LIVE!
+
+✅ Phase 1: Landing page with manual job input + instant Ghost Score calculation
+✅ Phase 2: Full dashboard with job history, stats & detailed views
+🔥 Bonus: LinkedIn scraping is WORKING - real job data extraction!
+
+Building in public at https://jobghost.io
+
+#buildinpublic #indiehacker #jobsearch
