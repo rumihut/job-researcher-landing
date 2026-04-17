@@ -1,0 +1,411 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-17T21:22:48.729Z",
+  "entries": {
+    "memory:memory/2026-04-05.md:31:78": {
+      "key": "memory:memory/2026-04-05.md:31:78",
+      "path": "memory/2026-04-05.md",
+      "startLine": 31,
+      "endLine": 78,
+      "source": "memory",
+      "snippet": "- **Documented in:** `memory/claw-store-deployment.md` ### 📊 Metrics & Status - **Active Projects:** GhostJob SaaS — IN PROGRESS - Repository: https://github.com/ahuts/job-guard-pro.git - 8 files committed locally, ready to push - **Completed Yesterday:** Scraper API, Ghost Score algorithm, React components ### ✅ Deliverables from Cron - **3 Tweet ideas generated** (see `memory/cron-outputs-archive.md`) - Tweet #3 selected: \"Dual-Play Strategy\" — posted at 8:42 AM ### 🎯 Today's Focus - Push GhostJob code to GitHub - Deploy to Vercel for testing - Set up Supabase schema --- --- ## 🌙 End-of-Day Summary (10:00 PM) ### ✅ What Got Done Today 1. **GitHub Access Solved** — Obtained PA",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.408164176241328,
+      "maxScore": 0.7260744750608912,
+      "firstRecalledAt": "2026-04-12T14:00:18.596Z",
+      "lastRecalledAt": "2026-04-12T14:00:31.657Z",
+      "queryHashes": [
+        "6a1a4924dbaa",
+        "c75ebde148bc"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "memory/claw-store-deployment.md",
+        "memory/cron-outputs-archive.md",
+        "dual-play",
+        "end-of-day",
+        "documented",
+        "claw",
+        "store",
+        "deployment.md"
+      ]
+    },
+    "memory:memory/2026-04-07.md:34:91": {
+      "key": "memory:memory/2026-04-07.md:34:91",
+      "path": "memory/2026-04-07.md",
+      "startLine": 34,
+      "endLine": 91,
+      "source": "memory",
+      "snippet": "- ✅ X login session saved via `setup_session.py` - ✅ Session verified: \"Session looks valid: https://x.com/home\" **Capabilities Now Active:** - 📝 Post tweets via API or browser - 👁️ Read timeline, mentions, search - 💬 Reply to tweets - 🔁 Repost/quote tweets - ❤️ Like/unlike tweets - 🔖 Bookmark tweets **3. FIRST AGENT TWEET POSTED!** 🎉 **Tweet:** ``` LinkedIn HTML parsing: SOLVED ✅ Extracted job titles, companies, descriptions via regex patterns after identifying that server-side responses differ from browser-rendered HTML. Debug iteration count: 12 ``` **Posted via:** `x-twitter-browser` skill (browser automation) **Timestamp:** April 7, 2026 ~10:28 PM CDT **Significance:** Fir",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6391750812705895,
+      "maxScore": 0.6391750812705895,
+      "firstRecalledAt": "2026-04-12T14:00:18.596Z",
+      "lastRecalledAt": "2026-04-12T14:00:18.596Z",
+      "queryHashes": [
+        "6a1a4924dbaa"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "setup-session.py",
+        "x.com/home",
+        "repost/quote",
+        "like/unlike",
+        "server-side",
+        "browser-rendered",
+        "x-twitter-browser",
+        "login"
+      ]
+    },
+    "memory:memory/2026-04-07.md:125:142": {
+      "key": "memory:memory/2026-04-07.md:125:142",
+      "path": "memory/2026-04-07.md",
+      "startLine": 125,
+      "endLine": 142,
+      "source": "memory",
+      "snippet": "| System | Status | |--------|--------| | LinkedIn Scraping | ✅ OPERATIONAL | | X Posting (API) | ✅ CONFIGURED | | X Browser Automation | ✅ OPERATIONAL | | Tweet Posted | ✅ FIRST AGENT TWEET! | | Chrome Extension | ⏳ READY TO BUILD | **Commits Today:** 10+ iterations on scraping **Skills Installed:** x-api, x-twitter-browser, bird **Breakthroughs:** 2 major (scraping solved, X automation live) --- **This day will be remembered as the moment GhostJob got its voice and its data pipeline.** 🚀 *Session closed at 10:30 PM. Chrome Extension build starts tomorrow.*",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6274134813608618,
+      "maxScore": 0.6274134813608618,
+      "firstRecalledAt": "2026-04-12T14:00:18.596Z",
+      "lastRecalledAt": "2026-04-12T14:00:18.596Z",
+      "queryHashes": [
+        "6a1a4924dbaa"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "x-api",
+        "x-twitter-browser",
+        "system",
+        "status",
+        "linkedin",
+        "scraping",
+        "operational",
+        "posting"
+      ]
+    },
+    "memory:memory/2026-04-11.md:184:207": {
+      "key": "memory:memory/2026-04-11.md:184:207",
+      "path": "memory/2026-04-11.md",
+      "startLine": 184,
+      "endLine": 207,
+      "source": "memory",
+      "snippet": "4. \"Various locations\" or missing location (-3 yellow) 5. Unrealistic experience combos (-8 red) 6. AI-generated language patterns (-3 yellow) 7. Strengthened urgency weight (-10) 8. Culture buzzwords + red flags contradiction (-4 yellow) — re-added from original ## V4 Code Audit Findings ### Bugs Found 1. Experience regex weaker in V4 (only 1 pattern vs original's 4) 2. Missing \"yellow\" signal category (culture buzzwords + red flags) 3. Salary regex too broad (could match IPs/dates) 4. Company extraction bare (1 selector vs original's 4) 5. Location extraction missing entirely 6. Description selector limited (1 vs 4 fallbacks) 7. SPA nav watcher too aggressive (no DOM change throttle) 8.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6935319088341035,
+      "maxScore": 0.6935319088341035,
+      "firstRecalledAt": "2026-04-12T15:35:12.190Z",
+      "lastRecalledAt": "2026-04-12T15:35:12.190Z",
+      "queryHashes": [
+        "122248ff4f73"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "ai-generated",
+        "re-added",
+        "ips/dates",
+        "various",
+        "locations",
+        "missing",
+        "location",
+        "yellow"
+      ]
+    },
+    "memory:memory/2026-04-11.md:1:20": {
+      "key": "memory:memory/2026-04-11.md:1:20",
+      "path": "memory/2026-04-11.md",
+      "startLine": 1,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "# 2026-04-11 Daily Journal ## 1) What Got Done - **Model switch:** Moved main agent from Kimi K2.5 → GLM-5.1 (Aaron noticed improvement in sharpness/reasoning) - **GhostJob market research:** Full competitive landscape deep-dive — identified 7 competitors, market sizing, and signal analysis - **Signal research:** Analyzed what makes good vs bad ghost job signals, drawing from Subspace's validated 39-signal model, JobScamScore's 25 flags, and Inteller's 30+ signals - **V4 code audit:** Documented 10 bugs and differences between original and V4 extension - **V4 promoted to main:** Aaron's v4 rewrite is now the active version; original kept as backup - **8 new signals decided:** No salary rang",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.2926589638425614,
+      "maxScore": 0.6735807190607991,
+      "firstRecalledAt": "2026-04-12T15:35:12.190Z",
+      "lastRecalledAt": "2026-04-12T16:13:04.088Z",
+      "queryHashes": [
+        "122248ff4f73",
+        "3378dc909c68"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "backup",
+        "k2.5",
+        "glm-5.1",
+        "sharpness/reasoning",
+        "deep-dive",
+        "39-signal",
+        "journal",
+        "what"
+      ]
+    },
+    "memory:memory/2026-04-11.md:123:163": {
+      "key": "memory:memory/2026-04-11.md:123:163",
+      "path": "memory/2026-04-11.md",
+      "startLine": 123,
+      "endLine": 163,
+      "source": "memory",
+      "snippet": "- **Quote extraction**: Every signal shows `💬 \"...actual text from posting...\"` with ~40 chars context - **Trust Score**: Flipped from Ghost Score (higher=worse) to Trust Score (higher=safer) - 0-30 = 🔴 Likely Ghost Job - 31-60 = 🟡 Proceed with Caution - 61-100 = 🟢 Looks Legitimate - **Button positioning fix**: Ghost button now appears to the right of Save (was appearing below) ### Bugs Found & Fixed During Testing - Regex crash: `m/f/d/v` unescaped slashes → fixed to `m\\/f\\/d\\/v` - popup.js still had old Ghost Score logic → updated to Trust Score - Chrome caches content scripts → must remove & re-add extension, close/reopen tab ### Still TODO - [ ] Location extraction testing —",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6157933045363154,
+      "maxScore": 0.6157933045363154,
+      "firstRecalledAt": "2026-04-12T16:13:04.088Z",
+      "lastRecalledAt": "2026-04-12T16:13:04.088Z",
+      "queryHashes": [
+        "3378dc909c68"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "0-30",
+        "31-60",
+        "61-100",
+        "m/f/d/v",
+        "popup.js",
+        "re-add",
+        "close/reopen",
+        "quote"
+      ]
+    },
+    "memory:memory/2026-04-11.md:15:47": {
+      "key": "memory:memory/2026-04-11.md:15:47",
+      "path": "memory/2026-04-11.md",
+      "startLine": 15,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "- 8 signal improvements prioritized and weighted (red -8/-10, yellow -3/-4) - Keep V4's architecture (content script fetches API directly, falls back to local scoring) ## 3) Blockers Encountered - V4 button click throws error on first load (works after page refresh) — likely race condition with DOM readiness - Floating badge still not working properly — deferred to later - Aaron frustrated by lack of completion notifications — need to explicitly confirm when tasks are done - Code changes for signal improvements + bug fixes were NOT yet implemented — ran out of time in session ## 4) Tomorrow's Focus - Implement 8 signal improvements into V4 content.js - Fix 10 identified bugs (experience re",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6125430412533746,
+      "maxScore": 0.6125430412533746,
+      "firstRecalledAt": "2026-04-12T16:13:04.088Z",
+      "lastRecalledAt": "2026-04-12T16:13:04.088Z",
+      "queryHashes": [
+        "3378dc909c68"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "content.js",
+        "signal",
+        "improvements",
+        "prioritized",
+        "weighted",
+        "red",
+        "yellow",
+        "keep"
+      ]
+    },
+    "memory:memory/2026-04-05.md:1:39": {
+      "key": "memory:memory/2026-04-05.md:1:39",
+      "path": "memory/2026-04-05.md",
+      "startLine": 1,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "# Daily Log — April 5, 2026 (Sunday) ## 📋 Rolled Over from April 4 ### GhostJob (Ghost Job Detector SaaS) — IN PROGRESS **Repository:** https://github.com/ahuts/job-guard-pro.git ### ✅ Today's Priorities (April 5) - [~] Integrate JobScanner into HeroSection — ROLLED OVER to April 6 - [~] Test mock scraper flow end-to-end — ROLLED OVER to April 6 - [~] Set up Supabase schema and auth — ROLLED OVER to April 6 - [~] Deploy to Vercel for testing — ROLLED OVER to April 6 ### 🔗 Open Questions / TODOs (from roadmap) - [ ] Finalize domain (ghostjob.io?) - [ ] Set up Supabase project - [ ] LinkedIn scraping: handle rate limits, anti-bot - [ ] Layoffs data source (layoffs.fyi API?) - [ ] Stripe",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7586106053045611,
+      "maxScore": 0.7586106053045611,
+      "firstRecalledAt": "2026-04-12T16:46:26.444Z",
+      "lastRecalledAt": "2026-04-12T16:46:26.444Z",
+      "queryHashes": [
+        "b6ad127811d8"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "end-to-end",
+        "ghostjob.io",
+        "anti-bot",
+        "layoffs.fyi",
+        "log",
+        "april",
+        "sunday",
+        "rolled"
+      ]
+    },
+    "memory:memory/2026-04-06.md:32:71": {
+      "key": "memory:memory/2026-04-06.md:32:71",
+      "path": "memory/2026-04-06.md",
+      "startLine": 32,
+      "endLine": 71,
+      "source": "memory",
+      "snippet": "- ✅ **Hybrid approach confirmed:** Manual input for new users + Chrome extension for power users - ✅ **Domain purchased:** jobghost.io ($35/year on Namecheap) - ✅ **Database schema designed:** profiles, scanned_jobs tables for Lovable/Supabase - ✅ **Marketing timeline:** Wait for Phase 3 (Chrome extension) before heavy marketing ### Commits Pushed - `cacf4b6` — Phase 1: Landing page with manual input - `36cd94f` — Phase 2: Dashboard components and routing --- ## 📊 Current Status | Phase | Status | Notes | |-------|--------|-------| | Phase 1: Landing Page | ✅ Complete | Live on Vercel | | Phase 2: Dashboard | ✅ Complete | Ready for Supabase hookup | | Phase 3: Chrome Extension | ⏳ Not s",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7433234380327831,
+      "maxScore": 0.7433234380327831,
+      "firstRecalledAt": "2026-04-12T16:46:26.444Z",
+      "lastRecalledAt": "2026-04-12T16:46:26.444Z",
+      "queryHashes": [
+        "b6ad127811d8"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "jobghost.io",
+        "35/year",
+        "scanned-jobs",
+        "lovable/supabase",
+        "hybrid",
+        "approach",
+        "confirmed",
+        "manual"
+      ]
+    },
+    "memory:memory/2026-04-06.md:1:36": {
+      "key": "memory:memory/2026-04-06.md:1:36",
+      "path": "memory/2026-04-06.md",
+      "startLine": 1,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "# Daily Log — April 6, 2026 (Monday) ## 📋 Rolled Over from April 5 ### GhostJob (Ghost Job Detector SaaS) — IN PROGRESS **Repository:** https://github.com/ahuts/job-guard-pro.git **Deployment:** https://jobghost-gamma.vercel.app --- ## ✅ What Actually Got Done (April 6) ### Phase 1: Landing Page + Manual Input ✅ COMPLETE - **JobInputForm.tsx** — Manual job entry form with all fields - **EmailCaptureModal.tsx** — Post-scan email signup - **Updated HeroSection.tsx** — Integrated form with instant Ghost Score - **Demo GIF placeholders** — Ready for content - **Result:** Users can now paste job details and get instant Ghost Score without signup ### Phase 2: Dashboard + Auth ✅ COMPLETE -",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7316409896563876,
+      "maxScore": 0.7316409896563876,
+      "firstRecalledAt": "2026-04-12T16:46:26.444Z",
+      "lastRecalledAt": "2026-04-12T16:46:26.444Z",
+      "queryHashes": [
+        "b6ad127811d8"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "jobghost-gamma.vercel.app",
+        "jobinputform.tsx",
+        "emailcapturemodal.tsx",
+        "post-scan",
+        "herosection.tsx",
+        "log",
+        "april",
+        "monday"
+      ]
+    },
+    "memory:memory/2026-04-04.md:36:73": {
+      "key": "memory:memory/2026-04-04.md:36:73",
+      "path": "memory/2026-04-04.md",
+      "startLine": 36,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "### 💡 Major Pivot Decisions - **New primary project:** GhostJob (Ghost Job Detector SaaS) - **Strategy:** Dual-play with existing OpenClaw Skill - Skill: $29 one-time for DIY users (claw.hatchedpixel.com) - SaaS: $9/mo subscription for convenience (ghostjob.io) - **MVP approach:** Web app first, Chrome extension later - **Build method:** Lovable → GitHub → Vercel + Supabase + Stripe ### 📋 GhostJob Details - **Problem:** 43% of job postings are ghost jobs (no real hiring intent) - **Solution:** AI-powered \"Ghost Score\" (0-100) + red flag detection - **Tech:** LinkedIn scraper → scoring algorithm → dashboard - **Status:** Aaron building landing page in Lovable now - **Full plan saved:**",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6999453920058194,
+      "maxScore": 0.6999453920058194,
+      "firstRecalledAt": "2026-04-12T16:46:26.444Z",
+      "lastRecalledAt": "2026-04-12T16:46:26.444Z",
+      "queryHashes": [
+        "b6ad127811d8"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "dual-play",
+        "one-time",
+        "claw.hatchedpixel.com",
+        "9/mo",
+        "ghostjob.io",
+        "ai-powered",
+        "0-100",
+        "major"
+      ]
+    },
+    "memory:memory/2026-04-12.md:47:74": {
+      "key": "memory:memory/2026-04-12.md:47:74",
+      "path": "memory/2026-04-12.md",
+      "startLine": 47,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "- **Chrome Extension v4.3 shipped** — Location extraction and salary detection overhauled - Class-agnostic location extraction using `·` separator pattern - 3-tier salary detection (span → description → full page body) - **X posting pipeline fixed** — smart-x-poster.js regex updated to match memory format, first tweet since April 8 posted - **Tweet-ideas cron removed** — redundant with X-poster crons that auto-generate and post - 9 scheduled X posts/week now active (2x daily M-F, 1x Sat, 1x Sun) ### 2) Key Decisions - Location extraction: ignore LinkedIn class names entirely, use structural patterns — classes change constantly - Salary detection: must scan entire page body, not just job",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6911889500706738,
+      "maxScore": 0.6911889500706738,
+      "firstRecalledAt": "2026-04-17T21:22:48.729Z",
+      "lastRecalledAt": "2026-04-17T21:22:48.729Z",
+      "queryHashes": [
+        "357d5eb45965"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "v4.3",
+        "class-agnostic",
+        "3-tier",
+        "smart-x-poster.js",
+        "tweet-ideas",
+        "x-poster",
+        "auto-generate",
+        "posts/week"
+      ]
+    },
+    "memory:memory/2026-04-12.md:21:50": {
+      "key": "memory:memory/2026-04-12.md:21:50",
+      "path": "memory/2026-04-12.md",
+      "startLine": 21,
+      "endLine": 50,
+      "source": "memory",
+      "snippet": "- **Removed redundant Tweet-ideas cron** — X-poster crons already generate and post automatically - **First tweet since April 8!** https://x.com/rumihutai/status/2043333449533067386 - 9 scheduled posts/week (2x daily M-F, 1x Sat, 1x Sun) ## 🔄 Still Pending - [ ] **Chrome Web Store icons** — 16x16, 48x48, 128x128 PNG (blocking submission) - [ ] **Chrome Web Store listing description** — needs writing - [ ] **Web dashboard with Supabase** — not started - [ ] **Save Job button** — save job + Trust Score to jobghost.io dashboard ## 📋 Open Questions / TODOs - [ ] Finalize domain (ghostjob.io?) - [ ] Set up Supabase project - [ ] LinkedIn scraping: handle rate limits, anti-bot - [ ] Layoffs da",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6774065516851936,
+      "maxScore": 0.6774065516851936,
+      "firstRecalledAt": "2026-04-17T21:22:48.729Z",
+      "lastRecalledAt": "2026-04-17T21:22:48.729Z",
+      "queryHashes": [
+        "357d5eb45965"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "tweet-ideas",
+        "x-poster",
+        "posts/week",
+        "m-f",
+        "jobghost.io",
+        "ghostjob.io",
+        "anti-bot",
+        "removed"
+      ]
+    }
+  }
+}

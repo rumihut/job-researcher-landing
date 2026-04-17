@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import https from 'https';
+import fs from 'fs';
 
 // X API Credentials (from TOOLS.md)
 const CONFIG = {
@@ -110,6 +111,43 @@ function postTweet(text) {
   });
 }
 
+function deleteTweet(tweetId) {
+  return new Promise((resolve, reject) => {
+    const url = `https://api.twitter.com/2/tweets/${tweetId}`;
+    
+    const authHeader = generateOAuthHeader('DELETE', url);
+    
+    const options = {
+      hostname: 'api.twitter.com',
+      path: `/2/tweets/${tweetId}`,
+      method: 'DELETE',
+      headers: {
+        'Authorization': authHeader,
+      }
+    };
+    
+    const req = https.request(options, (res) => {
+      let responseData = '';
+      
+      res.on('data', (chunk) => {
+        responseData += chunk;
+      });
+      
+      res.on('end', () => {
+        // 200 = deleted successfully
+        if (res.statusCode === 200) {
+          resolve({ success: true, id: tweetId });
+        } else {
+          reject(new Error(`Delete failed ${res.statusCode}: ${responseData}`));
+        }
+      });
+    });
+    
+    req.on('error', (err) => reject(err));
+    req.end();
+  });
+}
+
 // Main execution
 async function main() {
   const args = process.argv.slice(2);
@@ -120,18 +158,62 @@ async function main() {
     if (args[i] === '--message' || args[i] === '-m') {
       message = args[i + 1];
       i++;
+    } else if (args[i] === '--file' || args[i] === '-f') {
+      const filePath = args[i + 1];
+      i++;
+      if (!filePath || !fs.existsSync(filePath)) {
+        console.error(`❌ ERROR: File not found: ${filePath}`);
+        process.exit(1);
+      }
+      message = fs.readFileSync(filePath, 'utf-8').trim();
     } else if (args[i] === '--delete' || args[i] === '-d') {
       // Handle delete
       const tweetId = args[i + 1];
       console.log(`🗑️ Deleting tweet ${tweetId}...`);
-      // Delete logic would go here
-      process.exit(0);
+      
+      if (!tweetId) {
+        console.error('❌ ERROR: No tweet ID provided for deletion');
+        process.exit(1);
+      }
+      
+      try {
+        const result = await deleteTweet(tweetId);
+        console.log('✅ Deleted successfully!');
+        console.log(`🆔 Tweet ID: ${result.id}`);
+        process.exit(0);
+      } catch (error) {
+        console.error(`❌ Delete failed: ${error.message}`);
+        process.exit(1);
+      }
     }
   }
   
-  // Default message if none provided
+  // Require explicit message — no defaults to prevent accidental posts
   if (!message) {
-    message = "Building in public with @ahuts86 — What's your latest win?";
+    console.error('❌ ERROR: No --message provided. Use: node post-to-x.js --message "Your tweet"');
+    console.error('   No default messages allowed — prevents accidental/template posts.');
+    process.exit(1);
+  }
+  
+  // Validate message isn't placeholder/template text
+  const placeholderPatterns = [
+    /thursday afternoon/i,
+    /how it works/i,
+    /new week,? new build/i,
+    /teach tuesday/i,
+    /winsday/i,
+    /feature friday/i,
+    /strategy sunday/i,
+    /weekend build/i,
+    /^\s*$/  // empty or whitespace only
+  ];
+  
+  const isPlaceholder = placeholderPatterns.some(pattern => pattern.test(message));
+  if (isPlaceholder) {
+    console.error('❌ ERROR: Message appears to be placeholder/template text.');
+    console.error(`   Content: "${message}"`);
+    console.error('   Generate real content before posting.');
+    process.exit(1);
   }
   
   // Replace escaped newlines
