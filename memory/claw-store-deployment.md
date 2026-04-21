@@ -52,8 +52,8 @@
 **Command:** `node post-to-x.js --message "Your tweet here"`
 
 **X API Credentials (in script):**
-- Consumer Key: lPbzngu4mGpGN8T6F7KdVLRt7
-- Access Token: 2032526432069627907-o9beYeq6iYQWByfdwuFiv3RYdk5Yze
+- Consumer Key: [REDACTED — see local config]
+- Access Token: [REDACTED — see local config]
 
 **IMPORTANT:** Script has default message if none provided. Always use `--message` flag.
 
@@ -180,7 +180,7 @@ Reference the archive in daily logs:
 **Usage:**
 ```bash
 # Set remote with PAT embedded (one-time per repo)
-git remote set-url origin https://ahuts:[REDACTED]@github.com/ahuts/REPO_NAME.git
+git remote set-url origin https://ahuts:<PAT>@github.com/ahuts/REPO_NAME.git
 
 # Now pushes work seamlessly
 git push origin main
