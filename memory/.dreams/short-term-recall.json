@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-17T21:22:48.729Z",
+  "updatedAt": "2026-04-21T17:16:31.937Z",
   "entries": {
     "memory:memory/2026-04-05.md:31:78": {
       "key": "memory:memory/2026-04-05.md:31:78",
@@ -259,18 +259,20 @@
       "endLine": 71,
       "source": "memory",
       "snippet": "- ✅ **Hybrid approach confirmed:** Manual input for new users + Chrome extension for power users - ✅ **Domain purchased:** jobghost.io ($35/year on Namecheap) - ✅ **Database schema designed:** profiles, scanned_jobs tables for Lovable/Supabase - ✅ **Marketing timeline:** Wait for Phase 3 (Chrome extension) before heavy marketing ### Commits Pushed - `cacf4b6` — Phase 1: Landing page with manual input - `36cd94f` — Phase 2: Dashboard components and routing --- ## 📊 Current Status | Phase | Status | Notes | |-------|--------|-------| | Phase 1: Landing Page | ✅ Complete | Live on Vercel | | Phase 2: Dashboard | ✅ Complete | Ready for Supabase hookup | | Phase 3: Chrome Extension | ⏳ Not s",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.7433234380327831,
-      "maxScore": 0.7433234380327831,
+      "totalScore": 1.5141953517738702,
+      "maxScore": 0.7708719137410871,
       "firstRecalledAt": "2026-04-12T16:46:26.444Z",
-      "lastRecalledAt": "2026-04-12T16:46:26.444Z",
+      "lastRecalledAt": "2026-04-19T20:05:05.208Z",
       "queryHashes": [
-        "b6ad127811d8"
+        "b6ad127811d8",
+        "d3f448077ddb"
       ],
       "recallDays": [
-        "2026-04-12"
+        "2026-04-12",
+        "2026-04-19"
       ],
       "conceptTags": [
         "jobghost.io",
@@ -405,6 +407,349 @@
         "ghostjob.io",
         "anti-bot",
         "removed"
+      ]
+    },
+    "memory:memory/2026-04-16.md:20:46": {
+      "key": "memory:memory/2026-04-16.md:20:46",
+      "path": "memory/2026-04-16.md",
+      "startLine": 20,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "- GhostJob's edge: only tool that injects directly into LinkedIn inline - Aaron found the plan overwhelming — told him to focus on CWS Public + domain first ## Key Decisions | Decision | Rationale | |----------|-----------| | Daily improvement: prioritize domain DNS config | Unblocks the most downstream items (privacy URLs, marketing links, Product Hunt, CWS listing) | | X poster skipped afternoon tweet | No new accomplishments logged in daily file — script correctly opted out rather than post stale content | ## Blockers - **Chrome Web Store approval** — still pending (Day 2 of 1-3 day window since Apr 14 submission) - **Domain not pointed** — jobghost.io still on jobghost-gamma.vercel.app",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8780929727172192,
+      "maxScore": 0.8780929727172192,
+      "firstRecalledAt": "2026-04-19T12:01:31.536Z",
+      "lastRecalledAt": "2026-04-19T12:01:31.536Z",
+      "queryHashes": [
+        "128af5d52341"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "1-3",
+        "jobghost.io",
+        "jobghost-gamma.vercel.app",
+        "ghostjob's",
+        "edge",
+        "only",
+        "tool",
+        "injects"
+      ]
+    },
+    "memory:memory/2026-04-04.md:1:41": {
+      "key": "memory:memory/2026-04-04.md:1:41",
+      "path": "memory/2026-04-04.md",
+      "startLine": 1,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "# Daily Log — April 4, 2026 (Saturday) ## 🌅 Morning CEO Brief (7:00 AM) ### 📊 Metrics & Status - **Active Projects:** 2 primary projects - `job-researcher-landing`: OpenClaw Skills marketplace/store - `neon-claw-temp`: Related store/marketplace work - **Git Activity:** Recent commits focused on store branding updates and SPA routing fixes - **Deployment Status:** Both projects appear to have Vercel configs ready for deployment ### ✅ Priorities (Next 24-48h) 1. **Job Researcher Skill Launch** - Landing page completed, Stripe checkout integrated - Store branding updated to \"OpenClaw Skills\" - Ready for marketplace deployment 2. **X Autopilot Skill** - Launch sale active (",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.763939946725406,
+      "maxScore": 0.763939946725406,
+      "firstRecalledAt": "2026-04-19T17:01:51.284Z",
+      "lastRecalledAt": "2026-04-19T17:01:51.284Z",
+      "queryHashes": [
+        "9a7b9ac6df49"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "job-researcher-landing",
+        "marketplace/store",
+        "neon-claw-temp",
+        "store/marketplace",
+        "24-48h",
+        "log",
+        "april",
+        "saturday"
+      ]
+    },
+    "memory:memory/2026-04-18.md:1:26": {
+      "key": "memory:memory/2026-04-18.md:1:26",
+      "path": "memory/2026-04-18.md",
+      "startLine": 1,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "# 2026-04-18 — Saturday ## What Got Done - **Daily journal cron ran** (1:04 PM, 10:00 PM) - **Smart X poster auto-ran** (~6:18 PM) — posted personality-driven tweet successfully: \"43% of job postings are ghost jobs and nobody's talking about it. We built something that catches them inline on LinkedIn. Why did it take this long?\" - **X mentions checker ran** (~7:04 PM) — no new mentions since last check (lastSeenMentionId: 2045256287038882293) - **No human interaction today** — no sessions with Aaron, no git commits ### Automated Systems Status - ✅ **X poster** — new personality-driven poster confirmed working via cron auto-run. First automated personality tweet posted. - ✅ **X mentions ch",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.6586606345750088,
+      "maxScore": 0.9535995447585182,
+      "firstRecalledAt": "2026-04-19T17:01:51.284Z",
+      "lastRecalledAt": "2026-04-21T17:16:31.937Z",
+      "queryHashes": [
+        "9a7b9ac6df49",
+        "8abb97b0995f"
+      ],
+      "recallDays": [
+        "2026-04-19",
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "auto-ran",
+        "personality-driven",
+        "auto-run",
+        "saturday",
+        "what",
+        "got",
+        "done",
+        "journal"
+      ]
+    },
+    "memory:memory/2026-04-17.md:49:78": {
+      "key": "memory:memory/2026-04-17.md:49:78",
+      "path": "memory/2026-04-17.md",
+      "startLine": 49,
+      "endLine": 78,
+      "source": "memory",
+      "snippet": "- [ ] Narrow host_permissions to linkedin.com/jobs/* (CWS review safety) - [ ] \"View Dashboard\" link in extension popup - [ ] Scan history in popup (last 5 scans) - [ ] Polish extension icons - [ ] Real-world LinkedIn testing - [ ] Extension → Lovable Cloud backend (Save-to-Dashboard still hits Supabase directly) ## Completed (Archived from Apr 16) - ✅ Marketing plan saved to `ghostjob/MARKETING-PLAN.md` - ✅ X poster tweeted GhostJob marketing plan - ✅ Full SaaS product working (extension + auth + Supabase + Stripe) - ✅ Stripe integration completed (Apr 14) - ✅ Extension v1.0.8 improvements (multi-TLD check, dedup, token refresh, scan limits) ## Notes - Aaron did not work on GhostJob on Ap",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7025764486960945,
+      "maxScore": 0.7025764486960945,
+      "firstRecalledAt": "2026-04-19T17:01:51.284Z",
+      "lastRecalledAt": "2026-04-19T17:01:51.284Z",
+      "queryHashes": [
+        "9a7b9ac6df49"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "host-permissions",
+        "linkedin.com/jobs",
+        "real-world",
+        "save-to-dashboard",
+        "ghostjob/marketing-plan.md",
+        "v1.0.8",
+        "multi-tld",
+        "narrow"
+      ]
+    },
+    "memory:memory/2026-04-04.md:92:108": {
+      "key": "memory:memory/2026-04-04.md:92:108",
+      "path": "memory/2026-04-04.md",
+      "startLine": 92,
+      "endLine": 108,
+      "source": "memory",
+      "snippet": "- `GhostScoreDisplay.tsx` — Results display with score, signals, job details - `ghostScorer.ts` — Ghost Score algorithm (0-100) - `jobScraper.ts` — Service layer with mock data for dev - **Status:** Components ready, need to integrate into Lovable pages ### 🎯 Tomorrow's Focus (April 5) - Integrate JobScanner into HeroSection - Test mock scraper flow end-to-end - Set up Supabase schema and auth - Deploy to Vercel for testing --- ### 🔄 Next Check - Scheduled: Daily at 7:00 AM - Focus: GhostJob MVP progress, beta user acquisition",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7571623192948725,
+      "maxScore": 0.7571623192948725,
+      "firstRecalledAt": "2026-04-19T20:05:05.208Z",
+      "lastRecalledAt": "2026-04-19T20:05:05.208Z",
+      "queryHashes": [
+        "d3f448077ddb"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "ghostscoredisplay.tsx",
+        "ghostscorer.ts",
+        "0-100",
+        "jobscraper.ts",
+        "end-to-end",
+        "results",
+        "display",
+        "signals"
+      ]
+    },
+    "memory:memory/2026-04-04.md:64:99": {
+      "key": "memory:memory/2026-04-04.md:64:99",
+      "path": "memory/2026-04-04.md",
+      "startLine": 64,
+      "endLine": 99,
+      "source": "memory",
+      "snippet": "- Decision: Keep existing OpenClaw skills running, focus energy on GhostJob - Domain TBD: ghostjob.io preferred - This feels like the right pivot — huge market, clear pain, defensible angle --- ## 🌙 End-of-Day Summary (10:00 PM) ### ✅ What Got Done Today 1. **CEO Brief** — Reviewed active projects (job-researcher-landing, neon-claw-temp), both ready for deployment 2. **Strategic Pivot** — Decided to build GhostJob (Ghost Job Detector SaaS) 3. **Research** — Analyzed ghost job detection signals and competitor landscape 4. **Planning** — Defined scoring algorithm (0-100 Ghost Score), created 3-month and 6-month roadmap 5. **Lovable Setup** — Aaron building landing page; full prompt saved t",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7564177731562743,
+      "maxScore": 0.7564177731562743,
+      "firstRecalledAt": "2026-04-19T20:05:05.208Z",
+      "lastRecalledAt": "2026-04-19T20:05:05.208Z",
+      "queryHashes": [
+        "d3f448077ddb"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "ghostjob.io",
+        "end-of-day",
+        "job-researcher-landing",
+        "neon-claw-temp",
+        "0-100",
+        "3-month",
+        "6-month",
+        "decision"
+      ]
+    },
+    "memory:memory/2026-04-17.md:87:101": {
+      "key": "memory:memory/2026-04-17.md:87:101",
+      "path": "memory/2026-04-17.md",
+      "startLine": 87,
+      "endLine": 101,
+      "source": "memory",
+      "snippet": "- Workspace repo git push blocked by GitHub push protection on old secrets in memory files - `memory/claw-store-deployment.md` and `memory/2026-04-05.md` contain flagged secrets - Need to clean these up (rewrite history or remove files) to unblock pushes ### Still TODO - [ ] Point jobghost.io at Vercel (still unblocked for 3+ days) - [ ] Check CWS review status - [ ] Clean up old secrets in memory files to unblock git push - [ ] Test new X poster output with next cron run - ✅ First personality-driven tweet posted manually: https://x.com/rumihutai/status/2045253427790266386 - ✅ Set up X mentions checking (heartbeat) + auto-reply with safety rules - Script: `check-mentions.mjs` + `reply",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9550638588700795,
+      "maxScore": 0.9550638588700795,
+      "firstRecalledAt": "2026-04-21T17:16:31.937Z",
+      "lastRecalledAt": "2026-04-21T17:16:31.937Z",
+      "queryHashes": [
+        "8abb97b0995f"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "memory/claw-store-deployment.md",
+        "memory/2026-04-05.md",
+        "jobghost.io",
+        "personality-driven",
+        "auto-reply",
+        "check-mentions.mjs",
+        "repo",
+        "git"
+      ]
+    },
+    "memory:memory/2026-04-19.md:1:22": {
+      "key": "memory:memory/2026-04-19.md:1:22",
+      "path": "memory/2026-04-19.md",
+      "startLine": 1,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "# 2026-04-19 — Sunday ## What Got Done - **Daily journal cron ran** (11:01 PM from yesterday rollover; now this update at 10:00 PM) - **Smart X poster auto-ran** (~11:02 PM) — posted same personality tweet as Apr 18: \"43% of job postings are ghost jobs and nobody's talking about it. We built something that catches them inline on LinkedIn. Why did it take this long?\" (stale accomplishments, no new activity to draw from) - **X mentions checker ran** (~11:06 PM) — no new mentions since last check (lastSeenMentionId: 2045256287038882293) - **No human interaction today** — no sessions with Aaron, no git commits, no new development work ### Automated Systems Status - ✅ **X poster** — running bu",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9534018100855516,
+      "maxScore": 0.9534018100855516,
+      "firstRecalledAt": "2026-04-21T17:16:31.937Z",
+      "lastRecalledAt": "2026-04-21T17:16:31.937Z",
+      "queryHashes": [
+        "8abb97b0995f"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "auto-ran",
+        "sunday",
+        "what",
+        "got",
+        "done",
+        "journal",
+        "cron",
+        "ran"
+      ]
+    },
+    "memory:memory/2026-04-17.md:75:92": {
+      "key": "memory:memory/2026-04-17.md:75:92",
+      "path": "memory/2026-04-17.md",
+      "startLine": 75,
+      "endLine": 92,
+      "source": "memory",
+      "snippet": "- New output: `43% of job postings are ghost jobs and nobody's talking about it. We built something that catches them inline on LinkedIn. Why did it take this long?` - New categories: hot takes, building in public (thought process), milestones with emotion, insight-driven - Selection algo now penalizes 🛠️🔥✅ checklist style, rewards questions, opinions, complete thoughts - Shuffle/pick for variety so consecutive posts aren't similar - Git push to workspace repo failed — GitHub push protection flagged secrets in old memory files (claw-store-deployment.md, 2026-04-05.md). Poster script saved locally and works for crons. ### 🔑 Key Decisions - **X poster must have personality, not j",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9525673427009447,
+      "maxScore": 0.9525673427009447,
+      "firstRecalledAt": "2026-04-21T17:16:31.937Z",
+      "lastRecalledAt": "2026-04-21T17:16:31.937Z",
+      "queryHashes": [
+        "8abb97b0995f"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "insight-driven",
+        "shuffle/pick",
+        "claw-store-deployment.md",
+        "new",
+        "output",
+        "job",
+        "postings",
+        "ghost"
+      ]
+    },
+    "memory:memory/2026-04-18.md:19:45": {
+      "key": "memory:memory/2026-04-18.md:19:45",
+      "path": "memory/2026-04-18.md",
+      "startLine": 19,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "- **🔴 CWS review status** — Day 5 since Apr 14 submission (well past expected 1-3 day window). Needs follow-up ASAP. - **🟡 Git push blocked** — GitHub push protection on old secrets in memory files; can't push workspace repo - **🟡 No demo video** — #1 marketing asset, not started - **🟡 CWS Unlisted → Public** — still waiting on approval before switching ## Rollover to Apr 19 (Sunday) ### 🔴 Urgent (Morning Priority) 1. **CWS review follow-up** — Day 6 since Apr 14 submission (far past expected 1-3 day window). Check status in CWS developer dashboard. If rejected, fix and resubmit. If still pending, contact CWS support. This is now critical. ### 🟡 Carry-Over 2. **Clean old secrets fro",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9497850581430349,
+      "maxScore": 0.9497850581430349,
+      "firstRecalledAt": "2026-04-21T17:16:31.937Z",
+      "lastRecalledAt": "2026-04-21T17:16:31.937Z",
+      "queryHashes": [
+        "8abb97b0995f"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "1-3",
+        "follow-up",
+        "carry-over",
+        "cws",
+        "review",
+        "status",
+        "day",
+        "apr"
+      ]
+    },
+    "memory:memory/2026-04-19.md:19:37": {
+      "key": "memory:memory/2026-04-19.md:19:37",
+      "path": "memory/2026-04-19.md",
+      "startLine": 19,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "- **🔴 CWS review status** — Day 5+ since Apr 14 submission. Far past the expected 1-3 day window. **Critical** — Aaron needs to check CWS developer dashboard or contact support. - **🟡 Git push blocked** — GitHub push protection on old secrets in memory files; can't push workspace repo - **🟡 No demo video** — #1 marketing asset, not started - **🟡 CWS Unlisted → Public** — still waiting on approval before switching - **🟡 X poster recycling content** — no new development activity means poster is reusing old accomplishments. Need fresh work or pause posting cadence. ## Rollover to Apr 20 (Monday) ### 🔴 Urgent (Morning Priority) 1. **CWS review follow-up** — Now 7 days since Apr 14 submis",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9497558079871089,
+      "maxScore": 0.9497558079871089,
+      "firstRecalledAt": "2026-04-21T17:16:31.937Z",
+      "lastRecalledAt": "2026-04-21T17:16:31.937Z",
+      "queryHashes": [
+        "8abb97b0995f"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "1-3",
+        "follow-up",
+        "cws",
+        "review",
+        "status",
+        "day",
+        "apr",
+        "submission"
       ]
     }
   }

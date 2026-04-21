@@ -8,13 +8,6 @@ const CONFIG = {
   accessTokenSecret: 'mqFZwEI2HqPy4kQWKFHm5eKmeIAHU5IezrX1NN2AYNOjL',
 };
 
-const tweetId = process.argv[2];
-
-if (!tweetId) {
-  console.error('Usage: node delete-tweet.js <tweet_id>');
-  process.exit(1);
-}
-
 function genSig(method, url, params, consumerSecret, tokenSecret) {
   const sortedParams = Object.keys(params).sort().map(k =>
     `${encodeURIComponent(k)}=${encodeURIComponent(params[k])}`
@@ -24,7 +17,7 @@ function genSig(method, url, params, consumerSecret, tokenSecret) {
   return crypto.createHmac('sha1', signingKey).update(baseString).digest('base64');
 }
 
-function genHeader(method, url) {
+function genHeader(method, url, queryParams = {}) {
   const timestamp = Math.floor(Date.now() / 1000).toString();
   const nonce = crypto.randomBytes(16).toString('hex');
   const params = {
@@ -34,6 +27,7 @@ function genHeader(method, url) {
     oauth_timestamp: timestamp,
     oauth_nonce: nonce,
     oauth_version: '1.0',
+    ...queryParams
   };
   params.oauth_signature = genSig(method, url, params, CONFIG.consumerSecret, CONFIG.accessTokenSecret);
   return 'OAuth ' + Object.keys(params).map(k =>
@@ -41,22 +35,33 @@ function genHeader(method, url) {
   ).join(', ');
 }
 
-const url = `https://api.twitter.com/2/tweets/${tweetId}`;
+// Search for our recent tweets
+const query = 'from:rumihutai';
+const apiPath = `/2/tweets/search/recent?query=${encodeURIComponent(query)}&max_results=10&tweet.fields=created_at,text`;
+const url = `https://api.twitter.com/2/tweets/search/recent`;
+
 const options = {
   hostname: 'api.twitter.com',
-  path: `/2/tweets/${tweetId}`,
-  method: 'DELETE',
-  headers: { 'Authorization': genHeader('DELETE', url) }
+  path: apiPath,
+  method: 'GET',
+  headers: { 'Authorization': genHeader('GET', url) }
 };
 
 const req = https.request(options, res => {
   let data = '';
   res.on('data', chunk => data += chunk);
   res.on('end', () => {
-    if (res.statusCode === 200) {
-      console.log('✅ Deleted tweet', tweetId);
-    } else {
-      console.error('❌ Failed:', res.statusCode, data);
+    try {
+      const parsed = JSON.parse(data);
+      if (parsed.data) {
+        for (const t of parsed.data) {
+          console.log(`${t.id} | ${t.created_at} | ${t.text.substring(0, 100)}`);
+        }
+      } else {
+        console.log('Response:', data.substring(0, 500));
+      }
+    } catch(e) {
+      console.log('Raw:', data.substring(0, 500));
     }
   });
 });

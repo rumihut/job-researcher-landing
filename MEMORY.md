@@ -6,10 +6,13 @@
 **Status:** Stripe integrated ✅ | Chrome Web Store submitted for review ✅ | Dashboard built via Lovable Cloud | Save-to-Dashboard live ✅ | Auth (email/password) in extension ✅ | Token refresh ✅ | Scan limits (3/mo free) ✅ | Multi-TLD careers check ✅ | Duplicate save prevention ✅
 **Priority:** High
 **Next Steps:**
-- [ ] Chrome Web Store review approval (submitted Apr 14, check Apr 15-16)
+- [x] ✅ Point jobghost.io at Vercel (completed Apr 18 by Aaron)
+- [ ] 🔴 Chrome Web Store review follow-up (submitted Apr 14, Day 7+ — MEMORY.md previously marked approved but no human session confirmed. Aaron must verify dashboard status.)
+- [ ] Clean old secrets from memory files to unblock git push (claw-store-deployment.md, 2026-04-05.md)
+- [ ] Test new personality-driven X poster via cron auto-run
+- [ ] Record demo video (60 sec LinkedIn walkthrough)
 - [ ] Connect extension Save-to-Dashboard to Lovable Cloud backend
 - [ ] Real-world testing on LinkedIn (location + salary extraction)
-- [ ] Domain: point jobghost.io at Vercel (3+ days stale — provide exact step-by-step instead of vague reminders)
 - [ ] Polish extension icons (functional but need refinement)
 - [ ] Narrow host_permissions to linkedin.com/jobs/*
 - [ ] "View Dashboard" link in popup
@@ -18,13 +21,13 @@
 - [ ] Switch to Supabase later if Lovable Cloud hits limits
 
 **Key Details:**
-- Domain: jobghost.io (not yet connected, still on jobghost-gamma.vercel.app)
+- Domain: jobghost.io ✅ (connected to Vercel, Apr 18)
 - V4: Self-contained architecture — local scoring with API fallback
 - Trust Score (higher = safer, 0-100 scale)
 - Quote extraction shows actual text from postings for each signal
 - Extension injects "Scan for Ghost Jobs" button next to LinkedIn Save button
 - Modal overlay with red/yellow/green flags and detailed signal breakdowns
-- Chrome Web Store: Unlisted visibility (link-only), privacy policy at /privacy
+- Chrome Web Store: Published (Public visibility) ✅
 
 **Backend: Lovable Cloud** (not Supabase — see decision below)
 - Lovable auto-created tables: profiles, saved_jobs, scan_signals
@@ -110,7 +113,7 @@
 - [x] Scan limits (3/month free, unlimited signed in)
 - [x] Multi-TLD careers page check (.com/.io/.co/.org/.net/.ai)
 - [x] Duplicate save prevention
-- [ ] Chrome Web Store review approval (submitted Apr 14, check Apr 15-16)
+- [ ] Chrome Web Store review — submitted Apr 14; status uncertain (needs Aaron to verify dashboard)
 - [ ] Connect extension Save-to-Dashboard to Lovable Cloud
 - [ ] Real-world LinkedIn testing (location + salary on live pages)
 - [ ] Polish extension icons
@@ -118,7 +121,7 @@
 - [ ] "View Dashboard" link in popup
 - [ ] Scan history in popup (last 5 scans)
 - [ ] SPA navigation testing (MutationObserver stability)
-- [ ] Domain: point jobghost.io at Vercel
+- [x] Domain: point jobghost.io at Vercel ✅ (Apr 18, Aaron)
 
 ### Web Dashboard (Lovable Cloud)
 - [x] Auth (email/password + Google OAuth)
@@ -141,4 +144,4 @@
 
 ---
 
-*Last updated: April 14, 2026 11:00 PM*
+*Last updated: April 19, 2026 11:00 PM (todo rollover)*

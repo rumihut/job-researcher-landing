@@ -147,3 +147,28 @@ When injecting UI elements into third-party pages: (1) Check if the target eleme
 - Pattern-Key: css.flex_injection
 
 ---
+
+## [LRN-20260417-001] best_practice
+
+**Logged**: 2026-04-17T21:42:00Z
+**Priority**: high
+**Status**: promoted
+**Area**: frontend
+
+### Summary
+Social media posts need personality, not status updates — share the WHY, have opinions, tell stories.
+
+### Details
+Aaron flagged that X poster tweets were "extremely similar" and boring — just checklist bullet points like `🛠️ Marketing plan saved... 🚀 X poster tweeted... 🔥 Full SaaS product working`. These are meaningless to an audience. Rewrote smart-x-poster.js with personality-driven templates: hot takes, building-in-public stories (walk through thought process), milestones with emotion, and insight-driven content. First tweet with new style: "The hardest part of building GhostJob wasn't the detection algorithm — it was injecting a button into LinkedIn's DOM." Aaron: "SO much better now. We want posts like this going forward."
+
+### Suggested Action
+For any automated social media content: (1) Never post raw checklist/status updates, (2) Share WHY not WHAT — opinions and thought process, (3) Tell real technical stories, (4) Selection algorithm should penalize emoji-bullet format and reward questions and personality.
+
+### Metadata
+- Source: user_feedback
+- Related Files: skills/skill-x-poster/scripts/smart-x-poster.js
+- Tags: social-media, x-poster, personality, engagement
+- Pattern-Key: social.personality_over_status
+- Promoted: memory/2026-04-17.md
+
+---

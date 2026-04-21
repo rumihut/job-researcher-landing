@@ -28,6 +28,10 @@
     "x-twitter-browser": {
       "version": "1.0.10",
       "installedAt": 1775617857791
+    },
+    "trending-now": {
+      "version": "1.0.0",
+      "installedAt": 1776719232131
     }
   }
 }

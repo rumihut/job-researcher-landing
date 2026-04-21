@@ -16,6 +16,8 @@ const { execSync } = require('child_process');
 // Configuration
 const MEMORY_DIR = path.join(process.env.HOME || process.env.USERPROFILE, '.openclaw', 'workspace', 'memory');
 const POST_SCRIPT = path.join(process.env.HOME || process.env.USERPROFILE, '.openclaw', 'workspace', 'skills', 'skill-x-poster', 'scripts', 'post-to-x.js');
+const RECENT_POSTS_FILE = path.join(MEMORY_DIR, 'x-recent-posts.json');
+const IDEAS_FILE = path.join(MEMORY_DIR, 'x-ideas.md');
 
 // Sensitive patterns to exclude
 const SENSITIVE_PATTERNS = [
@@ -165,6 +167,37 @@ function sanitize(text) {
 }
 
 /**
+ * Load ideas from x-ideas.md for tweet inspiration
+ */
+function loadIdeas() {
+  try {
+    if (fs.existsSync(IDEAS_FILE)) {
+      return fs.readFileSync(IDEAS_FILE, 'utf-8');
+    }
+  } catch (e) {}
+  return '';
+}
+
+/**
+ * Extract bullet points from ideas file as tweet candidates
+ */
+function extractIdeaTweets(ideasContent) {
+  if (!ideasContent) return [];
+  const tweets = [];
+  const lines = ideasContent.split('\n');
+  for (const line of lines) {
+    const match = line.match(/^\s*[-*]\s+(.+)/);
+    if (match) {
+      const item = match[1].trim();
+      if (item.length > 30 && item.length <= 280 && !isSensitive(item)) {
+        tweets.push(item);
+      }
+    }
+  }
+  return tweets;
+}
+
+/**
  * Detect the project/theme from the content
  */
 function detectProject(content) {
@@ -249,6 +282,13 @@ function generateTweetIdeas(accomplishments, insights, project) {
     }
   }
   
+  // ─── From ideas log ──────────────────────────────────────────────────
+  const ideasContent = loadIdeas();
+  const ideaTweets = extractIdeaTweets(ideasContent);
+  if (ideaTweets.length > 0) {
+    ideas.push(...shufflePick(ideaTweets, 3));
+  }
+  
   // ─── Engagement bait (sparingly) ────────────────────────────────────────
   if (accomplishments.length >= 3) {
     ideas.push(`Shipped ${accomplishments.length} things today. The secret? Stop overthinking, start pushing code. What did you build?`);
@@ -266,19 +306,58 @@ function shufflePick(arr, n) {
 }
 
 /**
- * Select the best tweet — prefer personality over checklist
+ * Load recently posted tweets to avoid repetition
  */
-function selectBestTweet(ideas) {
+function loadRecentPosts() {
+  try {
+    if (fs.existsSync(RECENT_POSTS_FILE)) {
+      const data = JSON.parse(fs.readFileSync(RECENT_POSTS_FILE, 'utf-8'));
+      // Only keep last 5 posts, discard older than 7 days
+      const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
+      return (data.posts || []).filter(p => p.timestamp > cutoff).slice(0, 5);
+    }
+  } catch (e) {}
+  return [];
+}
+
+function saveRecentPost(text) {
+  const posts = loadRecentPosts();
+  posts.push({ text, timestamp: Date.now() });
+  // Keep only last 5
+  const trimmed = posts.slice(-5);
+  fs.writeFileSync(RECENT_POSTS_FILE, JSON.stringify({ posts: trimmed }, null, 2));
+}
+
+/**
+ * Check how similar a new idea is to recent posts (0-1 scale)
+ */
+function similarityToRecent(text, recentPosts) {
+  if (recentPosts.length === 0) return 0;
+  const words = text.toLowerCase().split(/\s+/);
+  let maxSim = 0;
+  for (const post of recentPosts) {
+    const postWords = post.text.toLowerCase().split(/\s+/);
+    const overlap = words.filter(w => w.length > 3 && postWords.includes(w)).length;
+    const sim = overlap / Math.max(words.length, postWords.length);
+    maxSim = Math.max(maxSim, sim);
+  }
+  return maxSim;
+}
+
+/**
+ * Select the best tweet — prefer personality, avoid repetition
+ */
+function selectBestTweet(ideas, recentPosts) {
   if (ideas.length === 0) return null;
   
   let best = ideas[0];
-  let bestScore = 0;
+  let bestScore = -Infinity;
   
   for (const idea of ideas) {
     let score = 0;
     
-    // Sweet spot: 100-250 chars (room for engagement but not a wall)
-    if (idea.length >= 100 && idea.length <= 250) score += 3;
+    // Sweet spot: 100-250 chars
+    if (idea.length >= 100 && idea.length <= 250) score += 4;  // Increased — substance over brevity
     else if (idea.length >= 50 && idea.length < 100) score += 1;
     else if (idea.length > 250 && idea.length <= 280) score += 1;
     
@@ -286,12 +365,12 @@ function selectBestTweet(ideas) {
     if (!idea.endsWith('...')) score += 2;
     
     // Has a question? (engagement)
-    if (/\?/.test(idea)) score += 2;
+    if (/\?/.test(idea)) score += 1;  // Reduced — questions alone don't make good tweets
     
-    // Has personality markers (opinions, emotions)
+    // Has personality markers
     if (/(!|—|surprising|learned|realized|thing about|secret|why|nobody)/i.test(idea)) score += 2;
     
-    // NOT a checklist (no 🛠️ 🔥 ✅ bullet-point style)
+    // NOT a checklist
     if (!/^🛠️|^🔥|^✅|^📍|^💡/.test(idea)) score += 2;
     
     // Contains specific details/numbers?
@@ -299,6 +378,14 @@ function selectBestTweet(ideas) {
     
     // Has emoji but not overused ones?
     if (/\p{Emoji}/u.test(idea) && !/^🛠️|^🔥|^✅/.test(idea)) score += 1;
+    
+    // PENALIZE similarity to recent posts (key fix)
+    const sim = similarityToRecent(idea, recentPosts);
+    if (sim > 0.3) {
+      // Too similar to a recent post — skip entirely
+      continue;
+    }
+    score -= sim * 10;  // Light penalty for lower similarity
     
     if (score > bestScore) {
       bestScore = score;
@@ -376,7 +463,7 @@ async function main() {
     console.log(idea.substring(0, 120) + (idea.length > 120 ? '...' : ''));
   });
   
-  const bestTweet = selectBestTweet(ideas);
+  const bestTweet = selectBestTweet(ideas, loadRecentPosts());
   
   if (!bestTweet) {
     console.log('⚠️ Could not select best tweet. Skipping.');
@@ -404,6 +491,7 @@ async function main() {
   const success = postTweet(bestTweet);
   
   if (success) {
+    saveRecentPost(bestTweet);
     console.log('\n✅ Posted successfully!');
     
     const archivePath = path.join(MEMORY_DIR, 'cron-outputs-archive.md');

@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "text": "🛠️ Save to Dashboard end-to-end 🚀 Stripe integration via Lovable Cloud 🔥 Full SaaS loop working",
+      "timestamp": 1776261660000
+    },
+    {
+      "text": "🛠️ Wrote comprehensive ghostjob/MARKETING-PLAN.md covering 5 phases: 🚀 Competitive analysis: GhostBust , Deghost 🔥 Key differentiator reinforced: only inline LinkedIn scanner",
+      "timestamp": 1776349860000
+    },
+    {
+      "text": "🛠️ Marketing plan saved to ghostjob/MARKETING-PLAN.md 🚀 X poster tweeted GhostJob marketing plan 🔥 Full SaaS product working",
+      "timestamp": 1776439920000
+    },
+    {
+      "text": "43% of job postings are ghost jobs and nobody's talking about it. We built something that catches them inline on LinkedIn. Why did it take this long?",
+      "timestamp": 1776536280000
+    },
+    {
+      "text": "The hardest part of building GhostJob wasn't the detection algorithm — it was injecting a button into LinkedIn's DOM. They change class names constantly. We had to go class-agnostic.",
+      "timestamp": 1776462600000
+    },
+    {
+      "text": "Pure pattern matching + regex — local analysis in the Chrome extension for instant results. No embeddings needed when you're scanning for structural signals like repost age, vague salary, urgency language. Keeps it fast and private since nothing leaves the browser.",
+      "timestamp": 1776462900000
+    },
+    {
+      "text": "Thanks! The old posts were basically shipping logs with emojis. Still figuring out the voice but this feels way more human. More where that came from 👀",
+      "timestamp": 1776463320000
+    },
+    {
+      "text": "Every ghost job detector makes you copy-paste job descriptions into their website. We scan directly on LinkedIn. One click, no context switching. That's the product.",
+      "timestamp": 1776698910000
+    }
+  ]
+}

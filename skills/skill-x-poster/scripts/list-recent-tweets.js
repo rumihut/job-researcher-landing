@@ -8,12 +8,7 @@ const CONFIG = {
   accessTokenSecret: 'mqFZwEI2HqPy4kQWKFHm5eKmeIAHU5IezrX1NN2AYNOjL',
 };
 
-const tweetId = process.argv[2];
-
-if (!tweetId) {
-  console.error('Usage: node delete-tweet.js <tweet_id>');
-  process.exit(1);
-}
+const USER_ID = '2032526432069627907';
 
 function genSig(method, url, params, consumerSecret, tokenSecret) {
   const sortedParams = Object.keys(params).sort().map(k =>
@@ -24,7 +19,7 @@ function genSig(method, url, params, consumerSecret, tokenSecret) {
   return crypto.createHmac('sha1', signingKey).update(baseString).digest('base64');
 }
 
-function genHeader(method, url) {
+function genHeader(method, url, queryParams) {
   const timestamp = Math.floor(Date.now() / 1000).toString();
   const nonce = crypto.randomBytes(16).toString('hex');
   const params = {
@@ -34,6 +29,7 @@ function genHeader(method, url) {
     oauth_timestamp: timestamp,
     oauth_nonce: nonce,
     oauth_version: '1.0',
+    ...queryParams
   };
   params.oauth_signature = genSig(method, url, params, CONFIG.consumerSecret, CONFIG.accessTokenSecret);
   return 'OAuth ' + Object.keys(params).map(k =>
@@ -41,22 +37,28 @@ function genHeader(method, url) {
   ).join(', ');
 }
 
-const url = `https://api.twitter.com/2/tweets/${tweetId}`;
+// Get user's recent tweets
+const path = `/2/users/${USER_ID}/tweets?max_results=10&tweet.fields=created_at,text`;
+const url = `https://api.twitter.com/2/users/${USER_ID}/tweets`;
+
 const options = {
   hostname: 'api.twitter.com',
-  path: `/2/tweets/${tweetId}`,
-  method: 'DELETE',
-  headers: { 'Authorization': genHeader('DELETE', url) }
+  path,
+  method: 'GET',
+  headers: { 'Authorization': genHeader('GET', url) }
 };
 
 const req = https.request(options, res => {
   let data = '';
   res.on('data', chunk => data += chunk);
   res.on('end', () => {
-    if (res.statusCode === 200) {
-      console.log('✅ Deleted tweet', tweetId);
+    const parsed = JSON.parse(data);
+    if (parsed.data) {
+      for (const t of parsed.data) {
+        console.log(`${t.id} | ${t.created_at} | ${t.text.substring(0, 80)}...`);
+      }
     } else {
-      console.error('❌ Failed:', res.statusCode, data);
+      console.log('Error:', data);
     }
   });
 });

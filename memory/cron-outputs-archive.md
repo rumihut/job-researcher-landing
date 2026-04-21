@@ -224,3 +224,73 @@ What's your latest win?
 - Extension v1.0.8 improvements (multi-TLD check, dedup, token refresh, scan limits)...
 
 ---
+
+## 2026-04-18T18:18:02.859Z — Smart X Poster
+
+### Tweet Posted
+```
+43% of job postings are ghost jobs and nobody's talking about it. We built something that catches them inline on LinkedIn. Why did it take this long?
+```
+
+### Source Accomplishments
+- Daily journal cron ran (1:04 PM) — this entry
+- No other activity today — no human interaction, no git commits, no cron outputs besides this journal
+- X mentions checker — last ran Apr 17 11:19 PM (lastSeenMentionId: 2045256287038882293), no new menti
+- X poster — last posted Apr 17 3:32 PM (old-style checklist tweet from stale accomplishments); new pe
+- Workspace git — still blocked by GitHub push protection on old secrets in `memory/claw-store-deploym
+- Marketing plan saved to `ghostjob/MARKETING-PLAN.md`
+- X poster tweeted GhostJob marketing plan
+- Full SaaS product working (extension + auth + Supabase + Stripe)
+- Stripe integration completed (Apr 14)
+- Extension v1.0.8 improvements (multi-TLD check, dedup, token refresh, scan limits)
+- Rewrote smart-x-poster.js with personality-driven content (Apr 17)
+- First personality-driven tweet posted: https://x.com/rumihutai/status/2045253427790266386
+- X mentions checking + auto-reply set up with safety rules (Apr 17)
+- First auto-reply to @ApplyWiseAi: https://x.com/rumihutai/status/2045275768071012611
+
+---
+
+## 2026-04-19T23:02:14.063Z — Smart X Poster
+
+### Tweet Posted
+```
+43% of job postings are ghost jobs and nobody's talking about it. We built something that catches them inline on LinkedIn. Why did it take this long?
+```
+
+### Source Accomplishments
+- jobghost.io domain pointed at Vercel (Aaron, Apr 18)
+- Marketing plan saved to `ghostjob/MARKETING-PLAN.md`
+- X poster tweeted GhostJob marketing plan
+- Full SaaS product working (extension + auth + Supabase + Stripe)
+- Stripe integration completed (Apr 14)
+- Extension v1.0.8 improvements (multi-TLD check, dedup, token refresh, scan limits)
+- Rewrote smart-x-poster.js with personality-driven content (Apr 17)
+- First personality-driven tweet posted: https://x.com/rumihutai/status/2045253427790266386
+- X mentions checking + auto-reply set up with safety rules (Apr 17)
+- First auto-reply to @ApplyWiseAi: https://x.com/rumihutai/status/2045275768071012611
+- New X poster cron auto-run confirmed working (Apr 18)
+
+---
+
+## 2026-04-20T14:32:24.040Z — Smart X Poster
+
+### Tweet Posted
+```
+43% of job postings are ghost jobs and nobody's talking about it. We built something that catches them inline on LinkedIn. Why did it take this long?
+```
+
+### Source Accomplishments
+- Todo rollover cron ran (11:00 PM) — reviewed open items from Apr 19
+- jobghost.io domain pointed at Vercel (Aaron, Apr 18)
+- Marketing plan saved to `ghostjob/MARKETING-PLAN.md`
+- X poster tweeted GhostJob marketing plan
+- Full SaaS product working (extension + auth + Supabase + Stripe)
+- Stripe integration completed (Apr 14)
+- Extension v1.0.8 improvements (multi-TLD check, dedup, token refresh, scan limits)
+- Rewrote smart-x-poster.js with personality-driven content (Apr 17)
+- First personality-driven tweet posted: https://x.com/rumihutai/status/2045253427790266386
+- X mentions checking + auto-reply set up with safety rules (Apr 17)
+- First auto-reply to @ApplyWiseAi: https://x.com/rumihutai/status/2045275768071012611
+- New X poster cron auto-run confirmed working (Apr 18)
+
+---
